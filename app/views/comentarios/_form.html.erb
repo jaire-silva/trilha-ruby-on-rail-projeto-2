@@ -12,19 +12,27 @@
   <% end %>
 
   <div>
-    <%= form.label :conteudo, style: "display: block" %>
-    <%= form.text_field :conteudo %>
+    <div>
+      <%= form.label :filme_id, "Escolha um filme" %>
+    </div>
+    <%= form.collection_select :filme_id, Filme.order(:nome), :id, :titulo %>
   </div>
 
+  <br>
+
   <div>
-    <%= form.label :filme_id, style: "display: block" %>
-    <%= form.text_field :filme_id %>
+    <%= form.label :conteudo,"Escreva seu comentário", style: "display: block"%>
+    <%= form.text_area :conteudo, size: "100x10" %>
   </div>
+
+  <br>
 
   <div>
     <%= form.label :aprovado, style: "display: block" %>
     <%= form.check_box :aprovado %>
   </div>
+  
+  <br>
 
   <div>
     <%= form.submit %>

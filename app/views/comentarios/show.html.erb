@@ -3,8 +3,10 @@
 <%= render @comentario %>
 
 <div>
-  <%= link_to "Edit this comentario", edit_comentario_path(@comentario) %> |
-  <%= link_to "Back to comentarios", comentarios_path %>
+  <%= link_to "Editar Comentário", edit_comentario_path(@comentario) %> |
+  <%= link_to "Listar Comentários", comentarios_path %>
 
-  <%= button_to "Destroy this comentario", @comentario, method: :delete %>
+  <br>
+  <br>
+  <%= button_to "Apagar Comentário", @comentario, method: :delete %>
 </div>

@@ -7,10 +7,10 @@
   <% @comentarios.each do |comentario| %>
     <%= render comentario %>
     <p>
-      <%= link_to "Show this comentario", comentario %>
+      <%= link_to "Detalhes do Comentário", comentario %>
     </p>
     <hr>
   <% end %>
 </div>
 
-<%= link_to "New comentario", new_comentario_path %>
+<%= link_to "Novo Comentário", new_comentario_path %>
