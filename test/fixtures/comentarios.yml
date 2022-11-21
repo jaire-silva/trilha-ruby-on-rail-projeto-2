@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  conteudo: MyString
+  filme: one
+  aprovado: false
+
+two:
+  conteudo: MyString
+  filme: two
+  aprovado: false

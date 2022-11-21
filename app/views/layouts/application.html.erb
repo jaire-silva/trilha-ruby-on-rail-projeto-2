@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projeto02</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+
+    <%= link_to "FILMES", filmes_path %> 
+    &nbsp; | &nbsp;
+    <%= link_to "ATORES", atores_path %>
+    &nbsp; | &nbsp;
+    <%= link_to "ELENCOS", elencos_path %>
+    &nbsp; | &nbsp;
+    <%= link_to "COMENTÁRIOS", comentarios_path %>
+    &nbsp; | &nbsp;
+    <%= link_to "LOGS", logs_path %>
+
+    <br>
+    <br>
+    <hr>
+    <br>
+    <%= yield %>
+  </body>
+</html>

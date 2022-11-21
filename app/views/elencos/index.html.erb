@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Elencos</h1>
+
+<div id="elencos">
+  <hr>
+  <% @elencos.each do |elenco| %>
+    <%= render elenco %>
+    <p>
+      <%= link_to "Show this elenco", elenco %>
+    </p>
+    <hr>
+  <% end %>
+</div>
+
+<%= link_to "New elenco", new_elenco_path %>

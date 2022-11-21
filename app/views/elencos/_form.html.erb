@@ -1,0 +1,35 @@
+<%= form_with(model: elenco) do |form| %>
+  <% if elenco.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(elenco.errors.count, "error") %> prohibited this elenco from being saved:</h2>
+
+      <ul>
+        <% elenco.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <div>
+      <%= form.label :atore_id, "Escolha um ator | atriz" %>
+    </div>
+    <%= form.collection_select :atore_id, Atore.order(:nome), :id, :nome %>
+  </div>
+
+  <br>
+
+  <div>
+    <div>
+      <%= form.label :filme_id, "Escolha um filme" %>
+    </div>
+    <%= form.collection_select :filme_id, Filme.order(:nome), :id, :titulo %>
+  </div>
+  
+  <br>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

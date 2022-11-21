@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @elenco %>
+
+<div>
+  <%= link_to "Edit this elenco", edit_elenco_path(@elenco) %> |
+  <%= link_to "Back to elencos", elencos_path %>
+
+  <%= button_to "Destroy this elenco", @elenco, method: :delete %>
+</div>

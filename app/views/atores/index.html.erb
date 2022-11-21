@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Atores</h1>
+
+<div id="atores">
+  <hr>
+  <% @atores.each do |atore| %>
+    <%= render atore %>
+    <p>
+      <%= link_to "Show this atore", atore %>
+    </p>
+    <hr>
+  <% end %>
+</div>
+
+<%= link_to "New atore", new_atore_path %>

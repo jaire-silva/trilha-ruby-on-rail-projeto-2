@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @atore %>
+
+
+<div>
+  <%= link_to "Edit this atore", edit_atore_path(@atore) %> |
+  <%= link_to "Back to atores", atores_path %>
+
+  <%= button_to "Destroy this atore", @atore, method: :delete %>
+</div>
